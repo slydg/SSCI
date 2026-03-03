@@ -71,6 +71,7 @@ SSCI_CODE/
 ├── EEG_Signals.py
 ├── Kinematic_Reconstruction.ipynb
 └── ...
+```
 
 ## 🚀 Usage & Reproduction
 
