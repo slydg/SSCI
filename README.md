@@ -49,13 +49,18 @@ pip install smplx open3d imageio
 
 The data requirements vary depending on the specific experiment:
 
-1.  **Physical Simulation Benchmarks (`Particle_Electromagnetic_Motion.ipynb`, `Stochastic_Swarm_Dynamics.ipynb`)**
+### 1.  **Physical Simulation Benchmarks (`Particle_Electromagnetic_Motion.ipynb`, `Stochastic_Swarm_Dynamics.ipynb`)**
     * No data download is required. The initial values and environments are purely simulated and generated on-the-fly during runtime.
-2.  **High-dimensional EEG Signals (`EEG_Signals.py`)**
-    * No manual download is required. The script utilizes `braindecode` to automatically fetch and preprocess the public high-gamma dataset (HGD) upon first run.
-3.  **Kinematic Reconstruction (`Kinematic_Reconstruction.ipynb`)**
-    * This experiment utilizes human motion capture data. We are currently packaging the standardized dataset.
-    * *Coming Soon:* A download link (e.g., Google Drive/Baidu Netdisk) will be provided here shortly. Once available, please download and extract it into a `Data/` folder in the root directory.
+### 2. High-dimensional EEG Signals
+No manual download is required for this experiment. By running `EEG_Signals.py`, the script utilizes the `braindecode` library to automatically fetch and preprocess the public High-Gamma Dataset (HGD) [Schirrmeister et al., 2017].
+
+### 3. Kinematic Reconstruction (Human Pose Data)
+Our full-body pose reconstruction experiments utilize motion capture data from the [CMU MoCap Dataset](http://mocap.cs.cmu.edu/), which is parameterized by the [SMPL](https://smpl.is.tue.mpg.de/) body model and unified within the [AMASS](https://amass.is.tue.mpg.de/) framework.
+
+⚠️ **License Notice:** Before downloading and using our preprocessed kinematic dataset, you must register and agree to the strict research use licenses on the official [AMASS website](https://amass.is.tue.mpg.de/) and [SMPL website](https://smpl.is.tue.mpg.de/).
+
+* **Preprocessed Data Download:** [Insert your Google Drive / Baidu Netdisk link here] 
+* *Note: Extract the downloaded archive into the `Data/` folder in the root directory.*
 
 ## 🚀 Usage & Reproduction
 
