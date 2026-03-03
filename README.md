@@ -49,18 +49,28 @@ pip install smplx open3d imageio
 
 The data requirements vary depending on the specific experiment:
 
-### 1.  **Physical Simulation Benchmarks (`Particle_Electromagnetic_Motion.ipynb`, `Stochastic_Swarm_Dynamics.ipynb`)**
-    * No data download is required. The initial values and environments are purely simulated and generated on-the-fly during runtime.
+### 1. Physical Simulation Benchmarks
+No data download is required for the `Particle_Electromagnetic_Motion.ipynb` and `Stochastic_Swarm_Dynamics.ipynb` experiments. The initial values and environments are purely simulated and generated on-the-fly during runtime.
+
 ### 2. High-dimensional EEG Signals
 No manual download is required for this experiment. By running `EEG_Signals.py`, the script utilizes the `braindecode` library to automatically fetch and preprocess the public High-Gamma Dataset (HGD) [Schirrmeister et al., 2017].
 
 ### 3. Kinematic Reconstruction (Human Pose Data)
-Our full-body pose reconstruction experiments utilize motion capture data from the [CMU MoCap Dataset](http://mocap.cs.cmu.edu/), which is parameterized by the [SMPL](https://smpl.is.tue.mpg.de/) body model and unified within the [AMASS](https://amass.is.tue.mpg.de/) framework.
+To strictly comply with the redistribution licenses of the AMASS and SMPL datasets, we do not provide direct download links for the motion capture data. Please follow these steps to prepare the data locally:
 
-⚠️ **License Notice:** Before downloading and using our preprocessed kinematic dataset, you must register and agree to the strict research use licenses on the official [AMASS website](https://amass.is.tue.mpg.de/) and [SMPL website](https://smpl.is.tue.mpg.de/).
+1. **Register & Agree to Licenses**: Create an account and agree to the research licenses on the official [AMASS website](https://amass.is.tue.mpg.de/) and [SMPL website](https://smpl.is.tue.mpg.de/).
+2. **Download Motion Data**: From the AMASS website, download the **CMU** dataset body data. Extract the contents into a `data/CMU/` directory.
+3. **Download Body Models**: Download the required SMPL/SMPL-X models from the official website and place them into a `data/smplx/` directory.
+4. **Verify Directory Structure**: Ensure your `data/` folder is organized as follows before running the `Kinematic_Reconstruction.ipynb` notebook:
 
-* **Preprocessed Data Download:** [Insert your Google Drive / Baidu Netdisk link here] 
-* *Note: Extract the downloaded archive into the `Data/` folder in the root directory.*
+```text
+SSCI_CODE/
+├── data/
+│   ├── CMU/            # Extracted AMASS CMU mocap data (e.g., .npz files)
+│   └── smplx/          # Extracted SMPL/SMPL-X model files (e.g., .pkl files)
+├── EEG_Signals.py
+├── Kinematic_Reconstruction.ipynb
+└── ...
 
 ## 🚀 Usage & Reproduction
 
