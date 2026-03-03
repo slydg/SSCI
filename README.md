@@ -19,8 +19,8 @@ This project depends on `PyTorch`, standard scientific computing libraries, Opti
 
 ```bash
 # Clone the repository
-git clone [https://github.com/your_username/](https://github.com/your_username/)[Project_Name].git
-cd [Project_Name]
+git clone https://github.com/slydg/SSCI.git
+cd SSCI
 
 # Create a virtual environment (Python 3.8+ recommended)
 conda create -n dynamics_env python=3.9
