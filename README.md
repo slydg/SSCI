@@ -1,4 +1,4 @@
-# [Project Name]
+# SSCI
 
 Official implementation for the paper **"Spline based Stochastic Conditional Interpolation for Dynamics Reconstruction and Trajectory Generation"**.
 
